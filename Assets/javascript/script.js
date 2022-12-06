@@ -9,7 +9,7 @@ var getMarvelApi = function () {
   fetch(
     `https://gateway.marvel.com/v1/public/characters?name=` +                                 //gets API information
       inputValue.value +
-      `git &ts=1&apikey=8e7128d8990f4d1a60535dfc20afb150&hash=f5ba5e9921f79729ed166c13294a9b6a`
+      `&ts=1&apikey=8e7128d8990f4d1a60535dfc20afb150&hash=f5ba5e9921f79729ed166c13294a9b6a`
   ).then(function (response) {
     console.log(inputValue.value);
     if (response.ok) {
@@ -17,7 +17,7 @@ var getMarvelApi = function () {
         console.log(data.data.results[0].description);                        //navigates to the discription page in API and sets to short-info ID
         document.querySelector(".short-info").innerHTML =              
           data.data.results[0].description;
-          console.log(data)
+          
 
           var characterImgURL = data.data.results[0].thumbnail.path;           //gets img from api and sets it in ID of img element
           var characterImg = [characterImgURL+"/portrait_incredible"+ ".jpg"];
@@ -30,14 +30,9 @@ var getMarvelApi = function () {
       
 };
 
-var getWikipediaAPI = function(){
-
-
-
-}
 
 button.addEventListener("click",getMarvelApi)
-
+button.addEventListener("click",getWikipediaAPI)
  
 
 //$(".btn").on("click", getMarvelApi);
