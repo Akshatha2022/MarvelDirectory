@@ -33,7 +33,5 @@ var getMarvelApi = function () {
 
 button.addEventListener("click",getMarvelApi)
 
- 
-
 //$(".btn").on("click", getMarvelApi);
 //});
