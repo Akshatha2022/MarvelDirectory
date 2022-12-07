@@ -17,7 +17,7 @@ var getMarvelApi = function () {
         console.log(data.data.results[0].description);                        //navigates to the discription page in API and sets to short-info ID
         document.querySelector(".short-info").innerHTML =              
           data.data.results[0].description;
-          console.log(data)
+          
 
           var characterImgURL = data.data.results[0].thumbnail.path;           //gets img from api and sets it in ID of img element
           var characterImg = [characterImgURL+"/portrait_incredible"+ ".jpg"];
@@ -62,5 +62,6 @@ function getImdbApi(){
 
 button.addEventListener("click",getMarvelApi)
 button.addEventListener("click",getImdbApi)
+
 //$(".btn").on("click", getMarvelApi);
 //});
