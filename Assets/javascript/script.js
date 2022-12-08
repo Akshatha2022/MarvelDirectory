@@ -28,12 +28,40 @@ var getMarvelApi = function () {
     
   });
       
-};
-
+}
+function getImdbApi(){
+  const options = {
+    method: 'GET',
+    params: {q: 'game of thr'},
+    headers: {
+      'X-RapidAPI-Key': '866ba6891emshf012812e04a3f17p1be6d9jsn726cacb876c4',
+      'X-RapidAPI-Host': 'online-movie-database.p.rapidapi.com'
+    }
+  };
+  
+  fetch(`https://online-movie-database.p.rapidapi.com/auto-complete?q=`+inputValue.value, options)
+  .then(function (response) {
+    console.log(inputValue.value);
+    if (response.ok) {
+      response.json().then(function (data) {
+        console.log(data)
+        
+        var movieImgSrc1 = data.d[1].i.imageUrl
+        $('#moviesImg1').attr('src', movieImgSrc1)
+        var movieImgSrc2 = data.d[2].i.imageUrl
+        $('#moviesImg2').attr('src', movieImgSrc2)
+        var movieImgSrc3 = data.d[3].i.imageUrl
+        $('#moviesImg3').attr('src', movieImgSrc3)
+        var movieImgSrc4 = data.d[4].i.imageUrl
+        $('#moviesImg4').attr('src', movieImgSrc4)
+        
+      });
+}
+});
+}
 
 button.addEventListener("click",getMarvelApi)
-button.addEventListener("click",getWikipediaAPI)
- 
+button.addEventListener("click",getImdbApi)
 
 //$(".btn").on("click", getMarvelApi);
 //});
