@@ -46,14 +46,10 @@ function getImdbApi(){
       response.json().then(function (data) {
         console.log(data)
         
-        var movieImgSrc1 = data.d[1].i.imageUrl
-        $('#moviesImg1').attr('src', movieImgSrc1)
-        var movieImgSrc2 = data.d[2].i.imageUrl
-        $('#moviesImg2').attr('src', movieImgSrc2)
-        var movieImgSrc3 = data.d[3].i.imageUrl
-        $('#moviesImg3').attr('src', movieImgSrc3)
-        var movieImgSrc4 = data.d[4].i.imageUrl
-        $('#moviesImg4').attr('src', movieImgSrc4)
+        for(var z = 1; z <= 4; z++) {
+          var movieImgSrc = data.d[z].i.imageUrl
+          $('#moviesImg' + z).attr('src', movieImgSrc)
+        }
         
       });
 }
@@ -63,5 +59,11 @@ function getImdbApi(){
 button.addEventListener("click",getMarvelApi)
 button.addEventListener("click",getImdbApi)
 
-//$(".btn").on("click", getMarvelApi);
-//});
+        // var movieImgSrc1 = data.d[1].i.imageUrl
+        // $('#moviesImg1').attr('src', movieImgSrc1)
+        // var movieImgSrc2 = data.d[2].i.imageUrl
+        // $('#moviesImg2').attr('src', movieImgSrc2)
+        // var movieImgSrc3 = data.d[3].i.imageUrl
+        // $('#moviesImg3').attr('src', movieImgSrc3)
+        // var movieImgSrc4 = data.d[4].i.imageUrl
+        // $('#moviesImg4').attr('src', movieImgSrc4)
