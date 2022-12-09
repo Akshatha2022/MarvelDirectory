@@ -27,6 +27,13 @@ function displayHistory (){
   console.log (history)
 
 }
+function init(){
+  var storedHistory = JSON.parse (window.localStorage.getItem('characterInput'));
+  if(storedHistory !== null) {
+    historyArr = storedHistory;
+    displayHistory()
+  }
+}
 
 var getMarvelApi = function () {
   console.log("button works");
@@ -140,3 +147,4 @@ button.addEventListener("click", displayHistory)
             }
           });
         });
+        init()
