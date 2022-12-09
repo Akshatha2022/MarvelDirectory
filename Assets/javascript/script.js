@@ -4,10 +4,23 @@ var inputValue = document.querySelector("#characterInput");
 var hash = "f5ba5e9921f79729ed166c13294a9b6a";
 var button = document.querySelector(".btn");
 
-var input = document.getElementById("characterInput");
-localStorage.setItem("character", input);
+function setLocalstorage() {
+  if(historyArr.indexOf(inputValue) === -1){
+    historyArr.push(inputValue.value);
+    localStorage.setItem('characterInput', JSON.stringify(historyArr));
+}
+}
 
-var storedValue = localStorage.getItem("character");
+  var historyArr = JSON.parse(localStorage.getItem('history')) || [];
+
+  if(historyArr.length){
+      for (let i = 0; i < historyArr.length; i++) {
+         displayHistory(historyArr[i])
+          
+      }
+  }
+
+
 
 
 var getMarvelApi = function () {
@@ -67,6 +80,7 @@ function getImdbApi(){
 
 button.addEventListener("click",getMarvelApi)
 button.addEventListener("click",getImdbApi)
+button.addEventListener("click", setLocalstorage)
 
         // var movieImgSrc1 = data.d[1].i.imageUrl
         // $('#moviesImg1').attr('src', movieImgSrc1)
