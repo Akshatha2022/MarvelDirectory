@@ -1,5 +1,7 @@
 # The Marvel Directory
 
+https://akshatha2022.github.io/MarvelDirectory/
+
 ## Description
 
 Our project allows the user/us to look up certain characters or groups in the MCU.
