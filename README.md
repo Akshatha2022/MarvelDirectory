@@ -23,7 +23,12 @@ Open Github > Hit Green "Code" Button > Inside the Clone drop down box select me
 ```
 # Credits
 Group work between Krister, Akshatha, Jesse , and Jackson.
+```
+https://developer.marvel.com/documentation/apiresults
+https://rapidapi.com/apidojo/api/online-movie-database/
+https://www.youtube.com/watch?v=0hTxjCvBSpA&amp;ab_channel=MintraRuensuk
 
+```
 # License
 MIT License
 
