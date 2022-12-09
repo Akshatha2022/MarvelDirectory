@@ -18,9 +18,9 @@ Overall, This has been fun and awarding. We now have more ideas and options we w
 Open Github > Hit Green "Code" Button > Inside the Clone drop down box select method of cloning(https, ssh, github CLI) > If cloning by SSH open a terminal or git inside type > $ git clone (the ssh) then hit enter> Then Viola
 
 # Usage
-```md
-![alt text](./Assets/Capture.PNG)
-```
+
+![group](./Assets/Capture.PNG)
+
 # Credits
 Group work between Krister, Akshatha, Jesse , and Jackson.
 
