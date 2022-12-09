@@ -54,9 +54,8 @@ var getMarvelApi = function () {
 function getImdbApi(){
   const options = {
     method: 'GET',
-    params: {q: 'game of thr'},
     headers: {
-      'X-RapidAPI-Key': '866ba6891emshf012812e04a3f17p1be6d9jsn726cacb876c4',
+      'X-RapidAPI-Key': 'c21921c1b2mshac831bb48532619p1580c3jsn39b34f798587',
       'X-RapidAPI-Host': 'online-movie-database.p.rapidapi.com'
     }
   };
