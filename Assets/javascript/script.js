@@ -4,6 +4,12 @@ var inputValue = document.querySelector("#characterInput");
 var hash = "f5ba5e9921f79729ed166c13294a9b6a";
 var button = document.querySelector(".btn");
 
+var input = document.getElementById("characterInput");
+localStorage.setItem("character", input);
+
+var storedValue = localStorage.getItem("character");
+
+
 var getMarvelApi = function () {
   console.log("button works");
   fetch(
@@ -57,6 +63,7 @@ function getImdbApi(){
 }
 });
 }
+
 
 button.addEventListener("click",getMarvelApi)
 button.addEventListener("click",getImdbApi)
