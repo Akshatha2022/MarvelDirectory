@@ -14,10 +14,23 @@
         </p>
       </div>
       <div class="level-item">
-        <!-- Need to fix search bar. Idea is having a 5 column section and having title be column 3 and search column 5 to not have search bar messed with centering of the title. -->
         <input type ="text" name="character" class="input characterInput" id="characterInput" placeholder="Search"/>
-
         <button class = "btn button is-primary" type="button">Search<i class='fas fa-search'></i></button>
+        <button class="js-modal-trigger " data-target="modal-js-example">
+          Your History
+        </button>
+      </div>
+      <div id="modal-js-example" class="modal">
+        <div class="modal-background"></div>
+      
+        <div class="modal-content">
+          <div class="box">
+            <p>Your History</p>
+            <p class="history"></p>
+          </div>
+        </div>
+      
+        <button class="modal-close is-large" aria-label="close"></button>
       </div>
     </header>
     <section>

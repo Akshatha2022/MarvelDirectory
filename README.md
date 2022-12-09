@@ -17,6 +17,7 @@ Overall, This has been fun and awarding. We now have more ideas and options we w
 - [Feature] (#feature)
 
 # Installation
+
 Open Github > Hit Green "Code" Button > Inside the Clone drop down box select method of cloning(https, ssh, github CLI) > If cloning by SSH open a terminal or git inside type > $ git clone (the ssh) then hit enter> Then Viola
 
 # Usage
@@ -24,6 +25,7 @@ Open Github > Hit Green "Code" Button > Inside the Clone drop down box select me
 ![group](./Assets/Capture.PNG)
 
 # Credits
+
 Group work between Krister, Akshatha, Jesse , and Jackson.
 ```
 https://developer.marvel.com/documentation/apiresults
@@ -32,6 +34,7 @@ https://www.youtube.com/watch?v=0hTxjCvBSpA&amp;ab_channel=MintraRuensuk
 
 ```
 # License
+
 MIT License
 
 Copyright (c) 2022 Akshatha
@@ -55,6 +58,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 # Feature
+
 You can look up certain characters/groups in the Marvel universe with a lot of limitation. 
 Due to the fact this API is either not optimized or we are not fully understanding the API we are not able to look up the entire Marvel Comic Universe.
 Here are the selected characters and groups that do work.
