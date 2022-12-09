@@ -1,3 +1,4 @@
+
 var publicKey = "8e7128d8990f4d1a60535dfc20afb150";
 var privateKey = "1a3c471c716725296e080f6c818073c57860aed4";
 var inputValue = document.querySelector("#characterInput");
@@ -20,9 +21,12 @@ function setLocalstorage() {
       }
   }
 
+function displayHistory (){
+  var history = JSON.parse (window.localStorage.getItem('characterInput'));
+  document.querySelector('.history').innerHTML=history
+  console.log (history)
 
-
-
+}
 
 var getMarvelApi = function () {
   console.log("button works");
@@ -54,9 +58,8 @@ var getMarvelApi = function () {
 function getImdbApi(){
   const options = {
     method: 'GET',
-    params: {q: 'game of thr'},
     headers: {
-      'X-RapidAPI-Key': '866ba6891emshf012812e04a3f17p1be6d9jsn726cacb876c4',
+      'X-RapidAPI-Key': 'c21921c1b2mshac831bb48532619p1580c3jsn39b34f798587',
       'X-RapidAPI-Host': 'online-movie-database.p.rapidapi.com'
     }
   };
@@ -82,6 +85,7 @@ function getImdbApi(){
 button.addEventListener("click",getMarvelApi)
 button.addEventListener("click",getImdbApi)
 button.addEventListener("click", setLocalstorage)
+button.addEventListener("click", displayHistory)
 
         // var movieImgSrc1 = data.d[1].i.imageUrl
         // $('#moviesImg1').attr('src', movieImgSrc1)
