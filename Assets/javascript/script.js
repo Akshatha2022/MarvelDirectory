@@ -1,3 +1,4 @@
+
 var publicKey = "8e7128d8990f4d1a60535dfc20afb150";
 var privateKey = "1a3c471c716725296e080f6c818073c57860aed4";
 var inputValue = document.querySelector("#characterInput");
@@ -20,9 +21,19 @@ function setLocalstorage() {
       }
   }
 
+function displayHistory (){
+  var history = JSON.parse (window.localStorage.getItem('characterInput'));
+  document.querySelector('.history').innerHTML=history
+  console.log (history)
 
-
-
+}
+function init(){
+  var storedHistory = JSON.parse (window.localStorage.getItem('characterInput'));
+  if(storedHistory !== null) {
+    historyArr = storedHistory;
+    displayHistory()
+  }
+}
 
 var getMarvelApi = function () {
   console.log("button works");
@@ -81,6 +92,7 @@ function getImdbApi(){
 button.addEventListener("click",getMarvelApi)
 button.addEventListener("click",getImdbApi)
 button.addEventListener("click", setLocalstorage)
+button.addEventListener("click", displayHistory)
 
         // var movieImgSrc1 = data.d[1].i.imageUrl
         // $('#moviesImg1').attr('src', movieImgSrc1)
@@ -135,3 +147,4 @@ button.addEventListener("click", setLocalstorage)
             }
           });
         });
+        init()
