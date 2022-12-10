@@ -1,6 +1,7 @@
 # The Marvel Directory
 
 https://akshatha2022.github.io/MarvelDirectory/
+https://github.com/Akshatha2022/MarvelDirectory.git
 
 ## Description
 
