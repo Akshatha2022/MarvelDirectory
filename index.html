@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Marvel Directory</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">  <!--Connecting Bulma-->
   </head>
   <body>
     <header class="title">
@@ -13,14 +13,14 @@
           Marvel Directory
         </p>
       </div>
-      <div class="level-item">
+      <div class="level-item"> <!--Search bar-->
         <input type ="text" name="character" class="input characterInput" id="characterInput" placeholder="Search"/>
         <button class = "btn button is-primary" type="button">Search<i class='fas fa-search'></i></button>
-        <button class="js-modal-trigger " data-target="modal-js-example">
+        <button class="js-modal-trigger " data-target="modal-js-example"> <!--History Modal button-->
           Your History
         </button>
       </div>
-      <div id="modal-js-example" class="modal">
+      <div id="modal-js-example" class="modal"> <!--Modal content information-->
         <div class="modal-background"></div>
       
         <div class="modal-content">
@@ -38,12 +38,12 @@
         <div class="tile is-2 is-vertical is-parent">
           <div class="tile is-child box">
             <p class="title"></p>
-            <img id="characterImg" src="">
+            <img id="characterImg" src="">   <!--character image will be put in from API-->
           </div>
         </div>
         <div class="tile is-parent">
           <div class="tile is-child box">
-            <h1 class="title" id="name"></h1>
+            <h1 class="title" id="name"></h1>  <!--name of the character will be placed from API-->
             <p class="short-info"></p>
           </div>
         </div>
@@ -52,7 +52,7 @@
         <div class="tile is-12 is-parent">
           <div class="tile is-parent box">
             <p class="title"></p>
-            <img id="moviesImg1" src="" style= "width:25%; height:auto">
+            <img id="moviesImg1" src="" style= "width:25%; height:auto">     <!--4 images of appearances will be displayed-->
             <img id="moviesImg2" src="" style= "width:25%; height:auto">
             <img id="moviesImg3" src="" style= "width:25%; height:auto">
             <img id="moviesImg4" src="" style= "width:25%; height:auto">
